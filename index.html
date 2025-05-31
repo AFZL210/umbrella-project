@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Umbrella</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="preview-section">
+            <div class="umbrella-container">
+                <img id="loader" src="./assets/icons/loader_icon.svg" class="loader hidden" alt="Loading...">
+                <img id="umbrella" src="assets/umbrella/Pink.png" alt="Umbrella">
+                <img id="logo" class="logo hidden" alt="Brand Logo">
+            </div>
+        </div>
+
+        <div class="customization-section">
+            <h1 class="editor-heading">Custom Umbrella</h1>
+
+            <div class="color-options">
+                <button class="color-swatch pink active" data-color="Pink"></button>
+                <button class="color-swatch blue" data-color="Blue"></button>
+                <button class="color-swatch yellow" data-color="Yellow"></button>
+            </div>
+
+            <div class="upload-section">
+                <div class="image-guidelines">
+                    <h3>Customize your umbrella</h3>
+                    <span>Upload a logo for an instant preview.</span>
+                    <span class="image-format">.png and .jpg files only. Max file size is 5MB.</span>
+                </div>
+                <label for="logo-upload" class="upload-button">
+                    <div class="upload-content">
+                        <img src="./assets/icons/upload_icon.svg" alt="Upload" id="upload-icon">
+                        <span id="upload-text">UPLOAD LOGO</span>
+                        <span id="file-name" class="hidden"></span>
+                        <button id="remove-logo" class="hidden">✕</button>
+                    </div>
+                </label>
+                <input type="file" id="logo-upload" accept="image/*" hidden>
+            </div>
+        </div>
+
+        <div class="watermark">
+            <img src="./assets/brand/Revize.avif" />
+        </div>
+    </div>
+
+    <script src="./scripts/main.js"></script>
+</body>
+
+</html>

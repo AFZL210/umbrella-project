@@ -1,0 +1,214 @@
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+:root {
+    --theme-color: #ff1493;
+    --background-color: #e2a9cd;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+    gap: 6.6rem;
+    background-color: var(--background-color);
+}
+
+.editor-heading {
+    font-weight: 600;
+    font-size: 2.6rem;
+}
+
+.preview-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.umbrella-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#umbrella {
+    max-width: 100%;
+    height: auto;
+    transition: opacity 0.3s;
+}
+
+.logo {
+    position: absolute;
+    bottom: 20%;
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.loader {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+.upload-btn-loader {
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.customization-section {
+    flex: 1;
+    padding: 2rem;
+    max-width: 440px;
+}
+
+.color-options {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.color-swatch {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.color-swatch:hover {
+    transform: scale(1.1);
+}
+
+.color-swatch.active {
+    border: 2px solid #333;
+}
+
+.pink {
+    background-color: #ff1493;
+}
+
+.blue {
+    background-color: #00a5ec;
+}
+
+.yellow {
+    background-color: #feb13f;
+}
+
+.upload-button {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--theme-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.upload-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.image-guidelines {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-guidelines h3 {
+    font-weight: 500;
+    font-size: 1.24rem;
+}
+
+.image-guidelines .image-format {
+    font-size: .64rem;
+    margin-top: .4rem;
+    margin-bottom: .2rem;
+}
+
+.watermark {
+    position: absolute;
+    bottom: .8rem;
+    left: .8rem;
+}
+
+.watermark img {
+    width: 9.8rem;
+    height: 3.2rem;
+    opacity: 42%;
+}
+
+.upload-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    height: 20px;
+}
+
+#upload-icon {
+    width: 20px;
+    height: 20px;
+}
+
+#upload-icon.loader {
+    animation: spin 1s linear infinite;
+}
+
+#remove-logo {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0 5px;
+    margin-left: auto;
+}
+
+#file-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+    margin-left: 12px;
+}
